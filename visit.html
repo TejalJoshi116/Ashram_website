@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>भेटीची योजना</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        /* Add your CSS styles for the calendar here */
+        #calendar-container {
+            font-family: Arial, sans-serif;
+        }
+
+        #calendar table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #calendar th, #calendar td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #calendar th {
+            background-color: #f2f2f2;
+        }
+
+        /* Style for the button */
+        #book-appointment-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6f3202; /* Adjust color as needed */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>आनंद आनाथाश्रम</h1>
+        <nav>
+            <ul>
+                <li><a href="main.html">मुख्य पान</a></li>
+                <li><a href="information.html">माहिती</a></li>
+                <li><a href="visit.html">भेटीची योजना</a></li>
+                <li><a href="donate.html">दान</a></li>
+                <li><a href="gallery.html">गॅलरी</a></li>
+                <li><a href="contact.html">संपर्क</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="calendar">
+            <h2>कॅलेंडर</h2>
+            <input type="text" id="datepicker"> <!-- Input field for the calendar -->
+        </section>
+
+        <div id="book-appointment">
+            <button id="book-appointment-btn">अपॉइंटमेंट बुक करा</button> <!-- Book Appointment button -->
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 आनंद आनाथाश्रम. सर्व हक्क राखीव.</p>
+    </footer>
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI library -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+    <script>
+        // Initialize the Datepicker
+        $(function() {
+            $("#datepicker").datepicker({
+                dateFormat: "dd/mm/yy", // Date format
+                changeMonth: true, // Enable month navigation
+                changeYear: true // Enable year navigation
+            });
+        });
+    </script>
+</body>
+</html>
