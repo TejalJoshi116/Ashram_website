@@ -1,0 +1,92 @@
+/* main.css */
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set default font family */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: #6f3202;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Add positioning for sign-in button */
+}
+
+/* Sign-in button styles */
+#signin-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #6f3202;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #a04e0e;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Change to inline-block */
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #6f3202;
+}
+
+/* Main content section styles */
+main {
+    padding: 20px;
+}
+
+/* Carousel image styles */
+.carousel-image {
+    width: 40%; /* Adjust the width as needed */
+    border: 3px solid #5f3407; /* Add border */
+    border-radius: 0px; /* Add border radius */
+    display: block;
+    margin: auto; /* Center the image */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #6f3202;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
