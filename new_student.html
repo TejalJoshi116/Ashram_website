@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>नविन नोंदणी</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="donate.css"> <!-- Add donate.css for form styling -->
+</head>
+<body>
+    <header>
+        <h1>श्री अन्नपूर्णा अनाथाश्रम </h1>
+        <button id="signin-btn">साइन इन</button> <!-- Sign in button -->
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="main.html">मुख्य पान</a></li>
+            <li><a href="information.html">माहिती</a></li>
+            <li><a href="visit.html">भेटीची योजना</a></li>
+            <li><a href="donate.html">दैनिक अहवाल</a></li>
+            <li><a href="gallery.html">गॅलरी</a></li>
+            <li><a href="contact.html">संपर्क</a></li>
+            <li><a href="new_student.html">नविन नोंदणी</a></li>
+            
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <div class="center-align">
+                <h2>नविन नोंदणी</h2>
+            </div>
+            <!-- Donation Form -->
+            <form action="new_entry_process.php" method="POST" class="donation-form">
+               <div class="form-group">
+                   <label for="full_name">पूर्ण नाव:</label>
+                   <input type="text" id="full_name" name="full_name" required>
+               </div>
+           
+               <div class="form-group">
+                   <label for="age">वय:</label>
+                   <input type="number" id="age" name="age" required>
+               </div>
+           
+               <div class="form-group">
+                   <label for="dob">जन्म तारीख:</label>
+                   <input type="date" id="dob" name="dob" required>
+               </div>
+           
+               <div class="form-group">
+                   <label for="known_family">माहिती असलेले कुटुंब:</label>
+                   <textarea id="known_family" name="known_family" required></textarea>
+               </div>
+           
+               <div class="form-group">
+                   <label for="date_of_admission">प्रवेशची तारीख:</label>
+                   <input type="date" id="date_of_admission" name="date_of_admission" required>
+               </div>
+           
+               <div class="form-group">
+                   <label for="gender">लिंग:</label>
+                   <select id="gender" name="gender" required>
+                       <option value="male">पुरुष</option>
+                       <option value="female">स्त्री</option>
+                       <option value="other">इतर</option>
+                   </select>
+               </div>
+           
+               <div class="form-group">
+                   <label for="guardian_name">देखभालकाचे नाव:</label>
+                   <input type="text" id="guardian_name" name="guardian_name" required>
+               </div>
+           
+               <div class="form-group">
+                   <label for="contact_number">संपर्क क्रमांक:</label>
+                   <input type="tel" id="contact_number" name="contact_number" required>
+               </div>
+           
+               <div class="form-group">
+                   <label for="address">पत्ता:</label>
+                   <textarea id="address" name="address" required></textarea>
+               </div>
+           
+               <button type="submit">सबमिट करा</button>
+           </form>
+           
+              
+                <br> 
+                <br>
+                <button type="submit">SUBMIT</button>
+                <br>
+                <br>
+                
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 श्री अन्नपूर्णा आनाथाश्रम. सर्व हक्क राखीव.</p>
+    </footer>
+</body>
+</html>

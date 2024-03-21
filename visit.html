@@ -3,87 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>भेटीची योजना</title>
+    <title>माहिती</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <style>
-        /* Add your CSS styles for the calendar here */
-        #calendar-container {
-            font-family: Arial, sans-serif;
-        }
-
-        #calendar table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        #calendar th, #calendar td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-
-        #calendar th {
-            background-color: #f2f2f2;
-        }
-
-        /* Style for the button */
-        #book-appointment-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #6f3202; /* Adjust color as needed */
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet_2" href="visit.css">
 </head>
 <body>
     <header>
-        <h1>आनंद आनाथाश्रम</h1>
-        <nav>
-            <ul>
-                <li><a href="main.html">मुख्य पान</a></li>
-                <li><a href="information.html">माहिती</a></li>
-                <li><a href="visit.html">भेटीची योजना</a></li>
-                <li><a href="donate.html">दान</a></li>
-                <li><a href="gallery.html">गॅलरी</a></li>
-                <li><a href="contact.html">संपर्क</a></li>
-            </ul>
-        </nav>
+        <h1>श्री अन्नपूर्णा अनाथाश्रम </h1>
+        <button id="signin-btn">साइन इन</button> <!-- Sign in button -->
     </header>
+    
+    <nav>
+        <ul>
+            <li><a href="main.html">मुख्य पान</a></li>
+            <li><a href="information.html">माहिती</a></li>
+            <li><a href="visit.html">भेटीची योजना</a></li>
+            <li><a href="donate.html">दैनिक अहवाल</a></li>
+            <li><a href="gallery.html">गॅलरी</a></li>
+            <li><a href="contact.html">संपर्क</a></li>
+            <li><a href="new_student.html">नविन नोंदणी</a></li>
+            
+        </ul>
+    </nav>
 
     <main>
-        <section id="calendar">
-            <h2>कॅलेंडर</h2>
-            <input type="text" id="datepicker"> <!-- Input field for the calendar -->
-        </section>
-
-        <div id="book-appointment">
-            <button id="book-appointment-btn">अपॉइंटमेंट बुक करा</button> <!-- Book Appointment button -->
-        </div>
+     <div class="datepicker">
+          <div class="datepicker-top">
+               <div class="btn-group">
+                    <button class="tag">Today</button>
+                    <button class="tag">Tomorrow</button>
+                    <button class="tag">In 2 days</button>
+               </div>
+               <div class="month-selector">
+                    <button class="arrow"><i class="material-icons">chevron_left</i></button>
+                    <span class="month-name">December 2020</span>
+                    <button class="arrow"><i class="material-icons">chevron_right</i></button>
+               </div>
+          </div>
+          <div class="datepicker-calendar">
+               <span class="day">Mo</span>
+               <span class="day">Tu</span>
+               <span class="day">We</span>
+               <span class="day">Th</span>
+               <span class="day">Fr</span>
+               <span class="day">Sa</span>
+               <span class="day">Su</span>
+               <button class="date faded">30</button>
+               <button class="date">1</button>
+               <button class="date">2</button>
+               <button class="date">3</button>
+               <button class="date">4</button>
+               <button class="date">5</button>
+               <button class="date">6</button>
+               <button class="date">7</button>
+               <button class="date">8</button>
+               <button class="date current-day">9</button>
+               <button class="date">10</button>
+               <button class="date">11</button>
+               <button class="date">12</button>
+               <button class="date">13</button>
+               <button class="date">14</button>
+               <button class="date">15</button>
+               <button class="date">16</button>
+               <button class="date">17</button>
+               <button class="date">18</button>
+               <button class="date">19</button>
+               <button class="date">20</button>
+               <button class="date">21</button>
+               <button class="date">22</button>
+               <button class="date">23</button>
+               <button class="date">24</button>
+               <button class="date">25</button>
+               <button class="date">26</button>
+               <button class="date">27</button>
+               <button class="date">28</button>
+               <button class="date">29</button>
+               <button class="date">30</button>
+               <button class="date">31</button>
+               <button class="date faded">1</button>
+               <button class="date faded">2</button>
+               <button class="date faded">3</button>
+          </div>
+     </div>
     </main>
 
     <footer>
-        <p>© 2024 आनंद आनाथाश्रम. सर्व हक्क राखीव.</p>
+        <p>© 2024 श्री अन्नपूर्णा आनाथाश्रम. सर्व हक्क राखीव.</p>
     </footer>
-
-    <!-- jQuery library -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- jQuery UI library -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-
-    <script>
-        // Initialize the Datepicker
-        $(function() {
-            $("#datepicker").datepicker({
-                dateFormat: "dd/mm/yy", // Date format
-                changeMonth: true, // Enable month navigation
-                changeYear: true // Enable year navigation
-            });
-        });
-    </script>
 </body>
 </html>
+

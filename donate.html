@@ -5,39 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>दान</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="donate.css"> <!-- Add donate.css for form styling -->
 </head>
 <body>
     <header>
-        <h1>आनंद आनाथाश्रम</h1>
-        <nav>
-            <ul>
-                <li><a href="main.html">मुख्य पान</a></li>
-                <li><a href="information.html">माहिती</a></li>
-                <li><a href="visit.html">भेटीची योजना</a></li>
-                <li><a href="donate.html">दान</a></li>
-                <li><a href="gallery.html">गॅलरी</a></li>
-                <li><a href="contact.html">संपर्क</a></li>
-            </ul>
-        </nav>
+        <h1>श्री अन्नपूर्णा अनाथाश्रम </h1>
+        <button id="signin-btn">साइन इन</button> <!-- Sign in button -->
     </header>
+    
+    <nav>
+        <ul>
+            <li><a href="main.html">मुख्य पान</a></li>
+            <li><a href="information.html">माहिती</a></li>
+            <li><a href="visit.html">भेटीची योजना</a></li>
+            <li><a href="donate.html">दैनिक अहवाल</a></li>
+            <li><a href="gallery.html">गॅलरी</a></li>
+            <li><a href="contact.html">संपर्क</a></li>
+            <li><a href="new_student.html">नविन नोंदणी</a></li>
+            
+        </ul>
+    </nav>
 
     <main>
         <section>
-            <h2>दान करा</h2>
-            <p>आपल्याला आमच्या कामात सहाय्य करण्याची इच्छा आहे? कृपया खाली दिलेल्या लिंकवर क्लिक करा आणि दान करा.</p>
-            <a href="#">दान करा</a> <!-- Donation link -->
-        </section>
-
-        <section>
-            <h2>आपल्या सहाय्याची महिती</h2>
-            <p>दानाच्या प्रकार, दान कसा करावा, किती रक्कम देण्याची इत्यादी माहिती संबंधित लिंकवर उपलब्ध आहे.</p>
-            <a href="#">अधिक माहितीसाठी येथे क्लिक करा</a> <!-- Link for more information -->
+            <div class="center-align">
+                <h2>दैनिक अहवाल</h2>
+            </div>
+            <!-- Donation Form -->
+            <form action="donation_process.php" method="POST" class="donation-form">
+                <div class="form-group two-inputs">
+                    <label for="first_name">नाव:</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                
+                    <label for="last_name">आडनाव:</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+                <div class="form-group two-inputs">
+                    <label for="phone">मोबाइल नंबर:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">संपूर्ण पत्ता:</label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="occupation">व्यवसाय/नोकरी:</label>
+                    <input type="text" id="occupation" name="occupation" required>
+                </div>
+                <div class="form-group two-inputs">
+                    <label for="donation_amount">देणगी रक्कम:</label>
+                    <input type="text" id="donation_amount" name="donation_amount" required>
+                
+                    <label for="items_donated">भेटवस्तू उपशील:</label>
+                    <input type="text" id="items_donated" name="items_donated" required>
+                </div>
+                <div class="form-group">
+                    <label for="donation_time">कार्यक्रमाची वेळ:</label>
+                    <input type="text" id="donation_time" name="donation_time" required>
+                </div>
+                <div class="form-group">
+                    <label for="image">कार्यक्रमाचे फोटो:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                </div>
+              
+                <br> 
+                <br>
+                <button type="submit">SUBMIT</button>
+                <br>
+                <br>
+                <h3>धन्यवाद!</h3>
+            </form>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 आनंद आनाथाश्रम. सर्व हक्क राखीव.</p>
+        <p>© 2024 श्री अन्नपूर्णा आनाथाश्रम. सर्व हक्क राखीव.</p>
     </footer>
 </body>
 </html>
-
