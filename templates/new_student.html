@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>नविन नोंदणी</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="donate.css"> <!-- Add donate.css for form styling -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='donate.css') }}"> <!-- Add donate.css for form styling -->
 </head>
 <body>
     <header>
@@ -13,16 +13,16 @@
         <button id="signin-btn">साइन इन</button> <!-- Sign in button -->
     </header>
     
-    <nav>
+    <nav class="nav-menu">
         <ul>
-            <li><a href="main.html">मुख्य पान</a></li>
-            <li><a href="information.html">माहिती</a></li>
-            <li><a href="visit.html">भेटीची योजना</a></li>
-            <li><a href="donate.html">दैनिक अहवाल</a></li>
-            <li><a href="gallery.html">गॅलरी</a></li>
-            <li><a href="contact.html">संपर्क</a></li>
-            <li><a href="new_student.html">नविन नोंदणी</a></li>
-            
+            <li><a href="{{ url_for('index') }}">मुखपृष्ठ</a></li>
+            <li><a href="{{ url_for('new_student') }}">नविन नोंदणी</a></li>
+            <li><a href="{{ url_for('information') }}">माहिती</a></li>
+            <li><a href="{{ url_for('visit') }}">भेटीची योजना</a></li>
+            <li><a href="{{ url_for('donate') }}">दैनिक अहवाल</a></li>
+            <li><a href="{{ url_for('gallery') }}">गॅलरी</a></li>
+            <li><a href="{{ url_for('contact') }}">संपर्क</a></li>
+
         </ul>
     </nav>
 
@@ -32,7 +32,7 @@
                 <h2>नविन नोंदणी</h2>
             </div>
             <!-- Donation Form -->
-            <form action="new_entry_process.php" method="POST" class="donation-form">
+            <form action="/new_student" method="POST" class="donation-form">
                <div class="form-group">
                    <label for="full_name">पूर्ण नाव:</label>
                    <input type="text" id="full_name" name="full_name" required>
@@ -84,20 +84,11 @@
            
                <button type="submit">सबमिट करा</button>
            </form>
-           
-              
-                <br> 
-                <br>
-                <button type="submit">SUBMIT</button>
-                <br>
-                <br>
-                
-            </form>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 श्री अन्नपूर्णा आनाथाश्रम. सर्व हक्क राखीव.</p>
+        <!-- <p>© 2024 श्री अन्नपूर्णा आनाथाश्रम. सर्व हक्क राखीव.</p> -->
     </footer>
 </body>
 </html>

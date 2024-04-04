@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>माहिती</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet_2" href="visit.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet_2" href="{{ url_for('static', filename='visit.css') }}">
 </head>
 <body>
     <header>
@@ -13,16 +13,15 @@
         <button id="signin-btn">साइन इन</button> <!-- Sign in button -->
     </header>
     
-    <nav>
+    <nav class="nav-menu">
         <ul>
-            <li><a href="main.html">मुख्य पान</a></li>
-            <li><a href="information.html">माहिती</a></li>
-            <li><a href="visit.html">भेटीची योजना</a></li>
-            <li><a href="donate.html">दैनिक अहवाल</a></li>
-            <li><a href="gallery.html">गॅलरी</a></li>
-            <li><a href="contact.html">संपर्क</a></li>
-            <li><a href="new_student.html">नविन नोंदणी</a></li>
-            
+            <li><a href="{{ url_for('index') }}">मुखपृष्ठ</a></li>
+            <li><a href="{{ url_for('new_student') }}">नविन नोंदणी</a></li>
+            <li><a href="{{ url_for('information') }}">माहिती</a></li>
+            <li><a href="{{ url_for('visit') }}">भेटीची योजना</a></li>
+            <li><a href="{{ url_for('donate') }}">दैनिक अहवाल</a></li>
+            <li><a href="{{ url_for('gallery') }}">गॅलरी</a></li>
+            <li><a href="{{ url_for('contact') }}">संपर्क</a></li>
         </ul>
     </nav>
 
@@ -88,7 +87,7 @@
     </main>
 
     <footer>
-        <p>© 2024 श्री अन्नपूर्णा आनाथाश्रम. सर्व हक्क राखीव.</p>
+        <!-- <p>© 2024 श्री अन्नपूर्णा आनाथाश्रम. सर्व हक्क राखीव.</p> -->
     </footer>
 </body>
 </html>

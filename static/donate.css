@@ -1,0 +1,177 @@
+/* donate.css */
+/* main.css */
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.table-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%; /* Adjust as needed */
+}
+
+/* Set default font family */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+header {
+    
+    background-color: #236672;
+    color: #fff;
+    text-align: center;
+    padding: 8px 5px;
+    position: relative; /* Add positioning for sign-in button */
+}
+
+/* Sign-in button styles */
+#signin-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #236672;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #A0E5F1;
+    padding: 2px 4px;
+    text-align: center;
+    
+    vertical-align:middle;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block; /* Change to inline-block */
+    margin-right: 20px;
+    padding-top: 10px;
+}
+
+nav ul li a {
+    color: #236672;
+    text-decoration: none;
+    padding: 20px;
+    
+    
+}
+
+.nav-menu a {
+    font-size: 18px; 
+    vertical-align:middle;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+nav ul li a:hover {
+    background-color: #236672;
+    color: #fff;
+}
+
+/* Main content section styles */
+main {
+    padding: 20px;
+}
+
+/* Carousel image styles */
+.carousel-image {
+    width: 700px;
+    height: 400px;
+    
+    /* border: 3px solid #A0E5F1; */
+    /* border-radius: 0px;  */
+    display: block;
+    margin: auto; /* Center the image */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #236672;
+    color: #fff;
+    text-align: center;
+    padding: 2px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+.donation-form {
+     max-width: 700px;
+     margin: 10px auto;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     background-color: #f9f9f9;
+ }
+
+ .nav-menu a {
+    font-size: 20px; 
+    vertical-align:middle;
+    margin-top: 20px;
+}
+ 
+ .center-align {
+     text-align: center; /* Center-align text */
+     margin-bottom: 20px; /* Add some bottom margin for spacing */
+ }
+ 
+ .form-group {
+     margin-bottom: 15px;
+     display: flex; /* Use flexbox for layout */
+     align-items: center; /* Align items vertically in the flex container */
+ }
+ 
+ .form-group label {
+     flex: 0 0 120px; /* Set a fixed width for labels */
+     margin-right: 0px; /* Decrease right margin for spacing */
+     margin-left: 20px; /* Increase left margin for spacing */
+ }
+ 
+ .form-group input[type="text"],
+ .form-group input[type="tel"],
+ .form-group input[type="email"],
+ .form-group textarea {
+     flex: 1; /* Take up remaining space */
+     box-sizing: border-box; /* Include padding and border in the width */
+     height: 25px; /* Increase height of input boxes */
+     padding: 5px; /* Add padding inside input boxes */
+ }
+ 
+ .form-group textarea {
+     height: 150px; /* Set height for textarea */
+ }
+ 
+ button[type="submit"] {
+     background-color: #6f3202;
+     color: #fff;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 5px;
+     cursor: pointer;
+     margin-top: 10px;
+ }
+ 
+ button[type="submit"]:hover {
+     background-color: #9d4e0e;
+ }
+ 

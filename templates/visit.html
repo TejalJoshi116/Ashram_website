@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>भेटीची योजना</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='visit_2.css') }}">
+</head>
+<body>
+    <header>
+        <h1>श्री अन्नपूर्णा अनाथाश्रम </h1>
+        <button id="signin-btn">साइन इन</button> <!-- Sign in button -->
+    </header>
+    
+    <nav class="nav-menu">
+        <ul>
+            <li><a href="{{ url_for('index') }}">मुखपृष्ठ</a></li>
+            <li><a href="{{ url_for('new_student') }}">नविन नोंदणी</a></li>
+            <li><a href="{{ url_for('information') }}">माहिती</a></li>
+            <li><a href="{{ url_for('visit') }}">भेटीची योजना</a></li>
+            <li><a href="{{ url_for('donate') }}">दैनिक अहवाल</a></li>
+            <li><a href="{{ url_for('gallery') }}">गॅलरी</a></li>
+            <li><a href="{{ url_for('contact') }}">संपर्क</a></li>
+
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <div class="center-align">
+                <h2>भेटीची योजना</h2>
+            </div>
+            <!-- Visit Booking Form -->
+            <form action="{{ url_for('visit') }}" method="POST" class="visit-form">
+                <div class="form-group">
+                    <label for="full_name">पूर्ण नाव:</label>
+                    <input type="text" id="full_name" name="full_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">मोबाइल नंबर:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">ईमेल:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="visit_date">भेटीची तारीख:</label>
+                    <input type="date" id="visit_date" name="visit_date" required>
+                </div>
+                <div class="form-group">
+                    <label for="visit_time">भेटीचा वेळ:</label>
+                    <input type="time" id="visit_time" name="visit_time" required>
+                </div>
+                <div class="form-group">
+                    <label for="num_of_people">संख्या:</label>
+                    <input type="number" id="num_of_people" name="num_of_people" min="1" required>
+                </div>
+                <!-- <div class="form-group">
+                    <label for="duration">भेटीचा काळ:</label>
+                    <input type="text" id="duration" name="duration" required>
+                </div> -->
+                <br>
+                <button type="submit">भेटी बुक करा</button>
+                <br>
+                <br>
+                <h3>धन्यवाद!</h3>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- <p>© 2024 श्री अन्नपूर्णा आनाथाश्रम. सर्व हक्क राखीव.</p> -->
+    </footer>
+</body>
+</html>
